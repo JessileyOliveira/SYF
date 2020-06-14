@@ -22,6 +22,7 @@ const Home: React.FC = () => {
       const response = await api.get(`4/search/movie?page=1&query=${search}`);
       setMoviesList(response.data.results);
     } catch (e) {
+      console.log(e);
       Alert.alert('Erro', 'Erro ao consultar Filmes!', [{text: 'Entendi'}], {
         cancelable: false,
       });

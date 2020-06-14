@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import {Dimensions} from 'react-native';
 
 export const Container = styled.View`
   flex: 1;
@@ -6,7 +7,7 @@ export const Container = styled.View`
   background: #fff;
   margin: 4px;
   border-radius: 4px;
-  max-width: 30%;
+  max-width: ${() => `${(Number(Dimensions.get('screen').width) - 32) / 3}px`};
 `;
 
 export const Poster = styled.Image`
